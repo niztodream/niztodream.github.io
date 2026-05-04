@@ -1,0 +1,209 @@
+{
+  "series": "indycar",
+  "season": 2026,
+  "rounds": [
+    {
+      "round": 1,
+      "name": "Firestone Grand Prix of St. Petersburg",
+      "flag": "🇺🇸",
+      "circuit": "Streets of St. Petersburg",
+      "sessions": {
+        "practice1": "2026-03-06T16:00:00Z",
+        "practice2": "2026-03-07T14:00:00Z",
+        "qualifying": "2026-03-07T18:00:00Z",
+        "warmup": "2026-03-08T13:30:00Z",
+        "race": "2026-03-08T17:30:00Z"
+      }
+    },
+    {
+      "round": 2,
+      "name": "XPEL Grand Prix",
+      "flag": "🇺🇸",
+      "circuit": "Circuit of The Americas",
+      "sessions": {
+        "practice1": "2026-03-20T18:00:00Z",
+        "practice2": "2026-03-21T16:00:00Z",
+        "qualifying": "2026-03-21T20:00:00Z",
+        "warmup": "2026-03-22T15:00:00Z",
+        "race": "2026-03-22T19:00:00Z"
+      }
+    },
+    {
+      "round": 3,
+      "name": "Acura Grand Prix of Long Beach",
+      "flag": "🇺🇸",
+      "circuit": "Streets of Long Beach",
+      "sessions": {
+        "practice1": "2026-04-17T19:00:00Z",
+        "practice2": "2026-04-18T16:30:00Z",
+        "qualifying": "2026-04-18T20:00:00Z",
+        "warmup": "2026-04-19T15:30:00Z",
+        "race": "2026-04-19T20:00:00Z"
+      }
+    },
+    {
+      "round": 4,
+      "name": "Children's of Alabama Indy Grand Prix",
+      "flag": "🇺🇸",
+      "circuit": "Barber Motorsports Park",
+      "sessions": {
+        "practice1": "2026-05-01T17:00:00Z",
+        "practice2": "2026-05-02T14:00:00Z",
+        "qualifying": "2026-05-02T18:00:00Z",
+        "warmup": "2026-05-03T14:00:00Z",
+        "race": "2026-05-03T18:30:00Z"
+      }
+    },
+    {
+      "round": 5,
+      "name": "Indianapolis 500",
+      "flag": "🇺🇸",
+      "circuit": "Indianapolis Motor Speedway",
+      "sessions": {
+        "practice1": "2026-05-15T16:00:00Z",
+        "practice2": "2026-05-16T16:00:00Z",
+        "qualifying": "2026-05-17T17:00:00Z",
+        "finalPractice": "2026-05-22T16:00:00Z",
+        "race": "2026-05-24T17:00:00Z"
+      }
+    },
+    {
+      "round": 6,
+      "name": "Chevrolet Detroit Grand Prix",
+      "flag": "🇺🇸",
+      "circuit": "Detroit Street Circuit",
+      "sessions": {
+        "practice1": "2026-05-29T17:00:00Z",
+        "practice2": "2026-05-30T14:00:00Z",
+        "qualifying": "2026-05-30T18:00:00Z",
+        "race": "2026-05-31T18:00:00Z"
+      }
+    },
+    {
+      "round": 7,
+      "name": "Hy-Vee INDYCAR Race I",
+      "flag": "🇺🇸",
+      "circuit": "Iowa Speedway",
+      "sessions": {
+        "practice1": "2026-06-12T20:00:00Z",
+        "qualifying": "2026-06-13T18:00:00Z",
+        "race": "2026-06-13T22:00:00Z"
+      }
+    },
+    {
+      "round": 8,
+      "name": "Hy-Vee INDYCAR Race II",
+      "flag": "🇺🇸",
+      "circuit": "Iowa Speedway",
+      "sessions": {
+        "practice2": "2026-06-14T18:00:00Z",
+        "race": "2026-06-14T22:00:00Z"
+      }
+    },
+    {
+      "round": 9,
+      "name": "Honda Indy Toronto",
+      "flag": "🇨🇦",
+      "circuit": "Streets of Toronto",
+      "sessions": {
+        "practice1": "2026-07-10T17:00:00Z",
+        "practice2": "2026-07-11T14:30:00Z",
+        "qualifying": "2026-07-11T19:00:00Z",
+        "warmup": "2026-07-12T14:00:00Z",
+        "race": "2026-07-12T18:30:00Z"
+      }
+    },
+    {
+      "round": 10,
+      "name": "Honda Indy 200 at Mid-Ohio",
+      "flag": "🇺🇸",
+      "circuit": "Mid-Ohio Sports Car Course",
+      "sessions": {
+        "practice1": "2026-07-24T17:00:00Z",
+        "practice2": "2026-07-25T14:00:00Z",
+        "qualifying": "2026-07-25T18:00:00Z",
+        "race": "2026-07-26T18:00:00Z"
+      }
+    },
+    {
+      "round": 11,
+      "name": "Bommarito Automotive Group 500",
+      "flag": "🇺🇸",
+      "circuit": "World Wide Technology Raceway",
+      "sessions": {
+        "practice1": "2026-08-21T20:00:00Z",
+        "qualifying": "2026-08-22T18:00:00Z",
+        "race": "2026-08-22T22:00:00Z"
+      }
+    },
+    {
+      "round": 12,
+      "name": "Coke Zero Sugar 400 (Indy)",
+      "flag": "🇺🇸",
+      "circuit": "Pocono Raceway",
+      "sessions": {
+        "practice1": "2026-08-28T17:00:00Z",
+        "qualifying": "2026-08-29T16:00:00Z",
+        "race": "2026-08-29T19:00:00Z"
+      }
+    },
+    {
+      "round": 13,
+      "name": "Big Machine Music City Grand Prix",
+      "flag": "🇺🇸",
+      "circuit": "Streets of Nashville",
+      "sessions": {
+        "practice1": "2026-09-04T20:00:00Z",
+        "practice2": "2026-09-05T17:00:00Z",
+        "qualifying": "2026-09-05T21:00:00Z",
+        "race": "2026-09-06T21:00:00Z"
+      }
+    },
+    {
+      "round": 14,
+      "name": "Firestone Grand Prix of Monterey",
+      "flag": "🇺🇸",
+      "circuit": "WeatherTech Raceway Laguna Seca",
+      "sessions": {
+        "practice1": "2026-09-18T19:00:00Z",
+        "practice2": "2026-09-19T17:00:00Z",
+        "qualifying": "2026-09-19T21:00:00Z",
+        "race": "2026-09-20T21:00:00Z"
+      }
+    },
+    {
+      "round": 15,
+      "name": "Bitnile.com Grand Prix of Portland",
+      "flag": "🇺🇸",
+      "circuit": "Portland International Raceway",
+      "sessions": {
+        "practice1": "2026-10-02T19:00:00Z",
+        "practice2": "2026-10-03T17:00:00Z",
+        "qualifying": "2026-10-03T21:00:00Z",
+        "race": "2026-10-04T21:00:00Z"
+      }
+    },
+    {
+      "round": 16,
+      "name": "Acura Grand Prix of Gateway",
+      "flag": "🇺🇸",
+      "circuit": "World Wide Technology Raceway at Gateway",
+      "sessions": {
+        "practice1": "2026-10-16T20:00:00Z",
+        "qualifying": "2026-10-17T18:00:00Z",
+        "race": "2026-10-17T22:00:00Z"
+      }
+    },
+    {
+      "round": 17,
+      "name": "Season Finale 125",
+      "flag": "🇺🇸",
+      "circuit": "Auto Club Speedway",
+      "sessions": {
+        "practice1": "2026-10-30T21:00:00Z",
+        "qualifying": "2026-10-31T19:00:00Z",
+        "race": "2026-10-31T23:00:00Z"
+      }
+    }
+  ]
+}
