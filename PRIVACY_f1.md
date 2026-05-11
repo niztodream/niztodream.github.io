@@ -1,6 +1,6 @@
 # Privacy Policy — RaceWeek Companion
 
-**Last updated: 2026-05-12**
+**Last updated: May 2026**
 
 RaceWeek Companion does not collect, transmit, or share any personal data with any third party, except as described below.
 
