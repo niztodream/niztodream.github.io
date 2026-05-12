@@ -1,46 +1,47 @@
-# Privacy Policy — 2026 Race Schedule (F1/WEC)
+# Privacy Policy — RaceWeek Companion
 
-**Last updated: 2026-04-27**
+**Last updated: May 2026**
 
-2026 Race Schedule (F1/WEC) does not collect, transmit, or share any personal data with any third party.  
-All data processing occurs locally on the user's device.
-
-For the purposes of this policy, "personal data" refers to any information that can identify an individual user.
+RaceWeek Companion does not collect, transmit, or share any personal data with any third party, except as described below.
 
 ## Data Stored on Your Device
 
-The following preferences are saved locally using Chrome's storage API and never leave your device:
+The following preferences are saved locally using Chrome's `storage` API and never leave your device:
 
-| Data | Purpose |
-|------|---------|
-| Notification timing (Off / 10 min / 1 hour) | Remembers your alert preference across sessions |
-| Badge display mode (F1 / WEC / Soonest) | Remembers which series to show on the toolbar badge |
+| Data             | Purpose                                                                     |
+| ---------------- | --------------------------------------------------------------------------- |
+| `notifyBefore`   | Alert timing preference (Off / 10 min / 1 hour, multi-select)               |
+| `notifySessions` | Per-category alert toggles (Race / Qualifying / Sprint / Practice)          |
+| `badgeMode`      | Badge series preference (Soonest / F1 / WEC / MotoGP / Formula E / IndyCar) |
+| `badgeSeries`    | Last detected soonest series (used to restore tab on popup open)            |
+| `licenseKey`     | Premium license key stored locally for activation status                                     |
 
-Data is stored locally using Chrome's storage API and is not transmitted or synced to external servers.
+## License Verification
+
+When a user manually enters a Premium license key and activates it, the extension sends a verification request to Gumroad's license API.
+
+* Endpoint: `https://api.gumroad.com/v2/licenses/verify`
+* Purpose: Verify Premium license validity
+* Data sent: License key and product identifier
+* No personal information is intentionally collected or stored by the extension during this process
+
+License verification only occurs when the user manually activates a license key.
 
 ## What This Extension Does NOT Do
 
-- Collect or transmit any personal information  
-- Access your browsing history or activity  
-- Use analytics, tracking, or third-party libraries  
-- Execute remotely hosted scripts  
-
-The extension does not rely on external servers for its core functionality.
+* Collect or transmit personal information
+* Access browsing history or browser activity
+* Connect to advertising, analytics, or tracking services
+* Use third-party libraries or remotely hosted scripts
 
 ## Permissions Used
 
-| Permission | Reason |
-|------------|--------|
-| `storage` | Saves notification and badge settings locally on your device |
-| `alarms` | Refreshes the D-day badge every 30 minutes and triggers pre-session alerts |
-| `notifications` | Displays optional pre-session alerts based on user preferences |
+| Permission      | Reason                                                        |
+| --------------- | ------------------------------------------------------------- |
+| `storage`       | Saves settings and license information locally on your device |
+| `alarms`        | Refreshes the D-day badge and schedules notification checks   |
+| `notifications` | Displays pre-session alerts when enabled by the user          |
 
 ## Changes to This Policy
 
 If this policy is updated, the "Last updated" date above will be revised. Continued use of the extension after any changes constitutes acceptance of the updated policy.
-
-## Contact
-
-If you have any questions about this Privacy Policy, you can contact us at:
-
-- Email: niztodream@gmail.com

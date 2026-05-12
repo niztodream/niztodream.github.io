@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — 2026 Race Schedule (F1/WEC)</title>
+  <title>Privacy Policy — RaceWeek Companion</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -31,25 +31,26 @@
     ul {
       margin-top: 10px;
     }
+    code {
+      background: #f0f0f0;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Privacy Policy — 2026 Race Schedule (F1/WEC)</h1>
-  <p><strong>Last updated:</strong> 2026-04-27</p>
+  <h1>Privacy Policy — RaceWeek Companion</h1>
+  <p><strong>Last updated:</strong> May 2026</p>
 
   <p>
-    2026 Race Schedule (F1/WEC) does not collect, transmit, or share any personal data with any third party.
-    All data processing occurs locally on the user's device.
-  </p>
-
-  <p>
-    For the purposes of this policy, "personal data" refers to any information that can identify an individual user.
+    RaceWeek Companion does not collect, transmit, or share any personal data with any third party, except as described below.
   </p>
 
   <h2>Data Stored on Your Device</h2>
   <p>
-    The following preferences are saved locally using Chrome's storage API and never leave your device:
+    The following preferences are saved locally using Chrome's <code>storage</code> API and never leave your device:
   </p>
 
   <table>
@@ -61,31 +62,47 @@
     </thead>
     <tbody>
       <tr>
-        <td>Notification timing (Off / 10 min / 1 hour)</td>
-        <td>Remembers your alert preference across sessions</td>
+        <td><code>notifyBefore</code></td>
+        <td>Alert timing preference (Off / 10 min / 1 hour, multi-select)</td>
       </tr>
       <tr>
-        <td>Badge display mode (F1 / WEC / Soonest)</td>
-        <td>Remembers which series to show on the toolbar badge</td>
+        <td><code>notifySessions</code></td>
+        <td>Per-category alert toggles (Race / Qualifying / Sprint / Practice)</td>
+      </tr>
+      <tr>
+        <td><code>badgeMode</code></td>
+        <td>Badge series preference (Soonest / F1 / WEC / MotoGP / Formula E / IndyCar)</td>
+      </tr>
+      <tr>
+        <td><code>badgeSeries</code></td>
+        <td>Last detected soonest series (used to restore tab on popup open)</td>
+      </tr>
+      <tr>
+        <td><code>licenseKey</code></td>
+        <td>Premium license key stored locally for activation status</td>
       </tr>
     </tbody>
   </table>
 
+  <h2>License Verification</h2>
   <p>
-    Data is stored locally using Chrome's storage API and is not transmitted or synced to external servers.
+    When a user manually enters a Premium license key and activates it, the extension sends a verification request to Gumroad's license API.
   </p>
+  <ul>
+    <li>Endpoint: <code>https://api.gumroad.com/v2/licenses/verify</code></li>
+    <li>Purpose: Verify Premium license validity</li>
+    <li>Data sent: License key and product identifier</li>
+    <li>No personal information is intentionally collected or stored by the extension during this process</li>
+  </ul>
+  <p>License verification only occurs when the user manually activates a license key.</p>
 
   <h2>What This Extension Does NOT Do</h2>
   <ul>
-    <li>Collect or transmit any personal information</li>
-    <li>Access your browsing history or activity</li>
-    <li>Use analytics, tracking, or third-party libraries</li>
-    <li>Execute remotely hosted scripts</li>
+    <li>Collect or transmit personal information</li>
+    <li>Access browsing history or browser activity</li>
+    <li>Connect to advertising, analytics, or tracking services</li>
+    <li>Use third-party libraries or remotely hosted scripts</li>
   </ul>
-
-  <p>
-    The extension does not rely on external servers for its core functionality.
-  </p>
 
   <h2>Permissions Used</h2>
 
@@ -99,15 +116,15 @@
     <tbody>
       <tr>
         <td><code>storage</code></td>
-        <td>Saves notification and badge settings locally on your device</td>
+        <td>Saves settings and license information locally on your device</td>
       </tr>
       <tr>
         <td><code>alarms</code></td>
-        <td>Refreshes the D-day badge every 30 minutes and triggers pre-session alerts</td>
+        <td>Refreshes the D-day badge and schedules notification checks</td>
       </tr>
       <tr>
         <td><code>notifications</code></td>
-        <td>Displays optional pre-session alerts based on user preferences</td>
+        <td>Displays pre-session alerts when enabled by the user</td>
       </tr>
     </tbody>
   </table>
