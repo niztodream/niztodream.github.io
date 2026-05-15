@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — GPT Codex Burn</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      margin: 40px auto;
+      padding: 0 24px;
+      color: #222;
+      max-width: 800px;
+    }
+    h1 { font-size: 24px; margin-top: 0; }
+    h2 { font-size: 17px; margin-top: 36px; border-bottom: 1px solid #e8e8e8; padding-bottom: 6px; }
+    p, li { font-size: 14px; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background-color: #f5f5f5; font-weight: 600; }
+    ul { margin-top: 8px; padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    code {
+      background: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .note {
+      background: #f0f7ff;
+      border-left: 3px solid #4775d8;
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    a { color: #4775d8; }
+  </style>
+</head>
+<body>
+
+  <h1>Privacy Policy — GPT Codex Burn</h1>
+  <p><em>Last updated: May 2026</em></p>
+
+  <p>
+    GPT Codex Burn does not collect, transmit, or share any personal data with any third party,
+    with the sole exception of optional license key verification handled by Gumroad (see below).
+    All core data processing occurs locally on the user's device.
+  </p>
+
+  <h2>Data Handling</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Where it stays</th>
+        <th>Sent externally?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Usage metrics (session %, weekly %, reset times)</td>
+        <td>Device only (<code>chrome.storage.local</code>)</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>User settings (thresholds, notification preferences)</td>
+        <td>Chrome sync storage (<code>chrome.storage.sync</code>)</td>
+        <td>
+          Synced across the user's browsers via their Google account;
+          not transmitted to any external servers by the extension
+        </td>
+      </tr>
+      <tr>
+        <td>chatgpt.com session cookies</td>
+        <td>Not accessed, read, or stored by the extension</td>
+        <td>No — attached automatically by the browser on fetch requests</td>
+      </tr>
+      <tr>
+        <td>Bearer token (access token)</td>
+        <td>Device only (<code>chrome.storage.local</code>, cached 25 min)</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Supporter license key</td>
+        <td>Device only (<code>chrome.storage.local</code>)</td>
+        <td>Sent to Gumroad API for one-time verification only</td>
+      </tr>
+      <tr>
+        <td>Supporter tier</td>
+        <td>Device only (<code>chrome.storage.local</code>)</td>
+        <td>No</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>What the Extension Does</h2>
+  <ul>
+    <li>Fetches a session token from <code>chatgpt.com/api/auth/session</code> using your existing browser login session.</li>
+    <li>Fetches usage data from <code>chatgpt.com/backend-api/wham/usage</code> using that token.</li>
+    <li>Displays usage metrics locally in the browser toolbar badge and popup.</li>
+    <li>Sends optional browser notifications (toast or system notifications) based on user preferences.</li>
+    <li>All processing happens on the user's device. The extension does not operate any backend server.</li>
+  </ul>
+
+  <h2>Optional: Supporter License Verification</h2>
+  <p>
+    If you choose to activate a Supporter license key, the extension sends that key to the
+    Gumroad license verification API (<code>api.gumroad.com/v2/licenses/verify</code>) for a one-time validation.
+    No other personal data is included in this request.
+  </p>
+  <div class="note">
+    Gumroad's privacy policy governs this interaction:
+    <a href="https://gumroad.com/privacy" target="_blank">https://gumroad.com/privacy</a>
+  </div>
+
+  <h2>What the Extension Does Not Do</h2>
+  <ul>
+    <li>Does not access, read, store, or transmit authentication credentials or cookies.</li>
+    <li>Does not track browsing history or website content.</li>
+    <li>Does not use analytics, crash reporting, or any third-party SDK.</li>
+    <li>Does not execute remotely hosted code.</li>
+  </ul>
+
+  <h2>Permissions Used</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Permission</th>
+        <th>Reason</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>storage</code></td>
+        <td>Stores usage metrics and user preferences locally and via Chrome sync</td>
+      </tr>
+      <tr>
+        <td><code>notifications</code></td>
+        <td>Displays optional usage alerts based on user-defined thresholds</td>
+      </tr>
+      <tr>
+        <td><code>alarms</code></td>
+        <td>Periodically updates usage metrics and triggers scheduled alerts</td>
+      </tr>
+      <tr>
+        <td><code>scripting</code></td>
+        <td>Injects in-page toast notifications into the active browser tab</td>
+      </tr>
+      <tr>
+        <td><code>tabs</code></td>
+        <td>Identifies the currently focused tab for toast delivery</td>
+      </tr>
+      <tr>
+        <td><code>&lt;all_urls&gt;</code></td>
+        <td>Allows toast notifications to appear on any website tab</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Changes to This Policy</h2>
+  <p>
+    If this policy is updated, the "Last updated" date above will be revised.
+    Continued use of the extension after any changes constitutes acceptance of the updated policy.
+  </p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this Privacy Policy, please contact:</p>
+  <ul>
+    <li>Email: <a href="mailto:niztodream@gmail.com">niztodream@gmail.com</a></li>
+  </ul>
+
+</body>
+</html>
