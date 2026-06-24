@@ -54,9 +54,10 @@
   <p><em>Last updated: May 2026</em></p>
 
   <p>
-    GPT Codex Burn does not collect, transmit, or share any personal data with any third party,
-    with the sole exception of optional license key verification handled by Gumroad (see below).
-    All core data processing occurs locally on the user's device.
+    GPT Codex Burn does not collect, transmit, or share any personally identifiable data with any
+    third party, with two exceptions: anonymous usage analytics (Google Analytics) and optional
+    license key verification (Gumroad), both described below. All core data processing occurs
+    locally on the user's device.
   </p>
 
   <h2>Data Handling</h2>
@@ -103,6 +104,11 @@
         <td>Device only (<code>chrome.storage.local</code>)</td>
         <td>No</td>
       </tr>
+      <tr>
+        <td>Anonymous analytics client ID (random UUID)</td>
+        <td>Device only (<code>chrome.storage.local</code>)</td>
+        <td>Sent to Google Analytics with each event</td>
+      </tr>
     </tbody>
   </table>
 
@@ -112,8 +118,22 @@
     <li>Fetches usage data from <code>chatgpt.com/backend-api/wham/usage</code> using that token.</li>
     <li>Displays usage metrics locally in the browser toolbar badge and popup.</li>
     <li>Sends optional browser notifications (toast or system notifications) based on user preferences.</li>
-    <li>All processing happens on the user's device. The extension does not operate any backend server.</li>
+    <li>Sends anonymous usage analytics events (see below).</li>
+    <li>All core processing happens on the user's device. The extension does not operate any backend server of its own.</li>
   </ul>
+
+  <h2>Usage Analytics (Google Analytics 4)</h2>
+  <p>
+    To understand which features are used and improve the extension, GPT Codex Burn sends anonymous
+    event data to Google Analytics 4 — for example, when the popup is opened, a panel is expanded,
+    a setting is toggled, or a license is activated. Each event is tied only to a randomly
+    generated client ID stored locally; no chatgpt.com account info, usage values, license keys,
+    or other personal data are included in these events.
+  </p>
+  <div class="note">
+    Google's privacy policy applies to this data:
+    <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+  </div>
 
   <h2>Optional: Supporter License Verification</h2>
   <p>
@@ -130,7 +150,8 @@
   <ul>
     <li>Does not access, read, store, or transmit authentication credentials or cookies.</li>
     <li>Does not track browsing history or website content.</li>
-    <li>Does not use analytics, crash reporting, or any third-party SDK.</li>
+    <li>Does not use crash reporting or any third-party SDK other than Google Analytics 4 (via direct API calls, no bundled script).</li>
+    <li>Does not include personally identifiable information in any analytics event.</li>
     <li>Does not execute remotely hosted code.</li>
   </ul>
 
@@ -165,8 +186,16 @@
         <td>Identifies the currently focused tab for toast delivery</td>
       </tr>
       <tr>
-        <td><code>&lt;all_urls&gt;</code></td>
-        <td>Allows toast notifications to appear on any website tab</td>
+        <td><code>windows</code></td>
+        <td>Identifies the last-focused window to locate the active tab</td>
+      </tr>
+      <tr>
+        <td><code>https://chatgpt.com/*</code></td>
+        <td>Fetches the auth session and usage data, and injects toast notifications on chatgpt.com tabs</td>
+      </tr>
+      <tr>
+        <td><code>https://www.google-analytics.com/*</code></td>
+        <td>Sends anonymous usage analytics events</td>
       </tr>
     </tbody>
   </table>
